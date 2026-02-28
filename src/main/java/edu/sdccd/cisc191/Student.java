@@ -33,7 +33,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return ("Student [ id =" + this.id + ", name = " + this.name + ", gpa = " + this.gpa + " ]");
+        return ("Student [ id = " + this.id + ", name = " + this.name + ", gpa = " + this.gpa + " ]");
     }
-}
 }
