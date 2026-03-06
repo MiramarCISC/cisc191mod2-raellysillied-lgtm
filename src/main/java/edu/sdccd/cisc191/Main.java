@@ -24,7 +24,8 @@ public class Main {
 
         // TODO demonstrate sorting
         StudentAnalyzer.sort(
-                students, (s1, s2) -> Double.compare(s1.getId(), s2.getId())
+                /// changed from Double type to Integer type
+                students, (s1, s2) -> Integer.compare(s1.getId(), s2.getId())
         );
         for (Student s : students) {
             System.out.println(s);

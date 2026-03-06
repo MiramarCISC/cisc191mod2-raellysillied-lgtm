@@ -6,9 +6,14 @@ import java.util.List;
 
 public class StudentAnalyzer {
     static List<Student> filter(List<Student> students, StudentFilter sf) {
+        /// added if statement and exception to handle null arrays
+        if (students == null || sf == null) {
+            throw new IllegalArgumentException("Students list and filter cannot be null");
+        }
+
         List<Student> result = new ArrayList<Student>();
         for (Student s : students) {
-            if (sf.filter(s)) {
+            if (sf.test(s)) { /// changed to "test" according to requirements
                 result.add(s);
             }
         }
