@@ -33,6 +33,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return ("Student [ id = " + this.id + ", name = " + this.name + ", gpa = " + this.gpa + " ]");
+        /// changed formatting
+        return String.format("Student{id=%d, name='%s', gpa=%.2f}", id, name, gpa);
     }
 }
